@@ -1,6 +1,6 @@
 // Configuration
 const FRAME_COUNT = 600;
-const FRAME_PATH_TEMPLATE = (index) => `frames/frame_${String(index).padStart(4, '0')}.jpg`;
+const FRAME_PATH_TEMPLATE = (index) => `frames/frame_${String(index).padStart(4, '0')}.webp`;
 
 function initApp() {
   // SAFETY: unlock preloader after 2s no matter what (handles missing frames folder on deployment)
