@@ -200,7 +200,7 @@ window.addEventListener('resize', () => {
   resizeTimeout = setTimeout(resizeCanvas, 100);
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+const initApp = () => {
   document.body.style.overflow = 'hidden';
   preloadImages();
 
@@ -384,5 +384,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Trigger once on load to set initial state
     window.dispatchEvent(new Event('scroll'));
   }
+};
 
-});
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
