@@ -4,20 +4,21 @@ const CANVAS_ID = 'scroll-canvas';
 const SCROLL_CONTAINER_CLASS = '.scroll-container';
 const FRAME_PATH_TEMPLATE = (index) => `frames/frame_${String(index).padStart(4, '0')}.jpg`;
 
-// State Variables
-const images = [];
-let loadedCount = 0;
-let targetFrame = 1;
-let currentFrame = 1;
-let lastDrawnFrame = -1;
+const initApp = () => {
+  // State Variables
+  const images = [];
+  let loadedCount = 0;
+  let targetFrame = 1;
+  let currentFrame = 1;
+  let lastDrawnFrame = -1;
 
-// DOM Elements
-const canvas = document.getElementById(CANVAS_ID);
-const ctx = canvas.getContext('2d');
-const preloader = document.getElementById('preloader');
-const percentText = document.getElementById('load-percentage');
-const progressBar = document.getElementById('load-progress-bar');
-const headerNav = document.getElementById('header-nav');
+  // DOM Elements
+  const canvas = document.getElementById(CANVAS_ID);
+  const ctx = canvas.getContext('2d');
+  const preloader = document.getElementById('preloader');
+  const percentText = document.getElementById('load-percentage');
+  const progressBar = document.getElementById('load-progress-bar');
+  const headerNav = document.getElementById('header-nav');
 
 // Preload Images
 function preloadImages() {
@@ -202,7 +203,6 @@ window.addEventListener('resize', () => {
   resizeTimeout = setTimeout(resizeCanvas, 100);
 });
 
-const initApp = () => {
   document.body.style.overflow = 'hidden';
   preloadImages();
 
@@ -382,10 +382,10 @@ const initApp = () => {
         }
       });
     }
-    
-    // Trigger once on load to set initial state
-    window.dispatchEvent(new Event('scroll'));
   }
+
+  // Trigger once on load to set initial state
+  window.dispatchEvent(new Event('scroll'));
 };
 
 if (document.readyState === 'loading') {
