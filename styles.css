@@ -1529,3 +1529,163 @@ body {
   height: auto;
   overflow: visible;
 }
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS (MAX-WIDTH: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Global Adjustments */
+  .std-section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .mega-title {
+    font-size: 14vw !important;
+    line-height: 1 !important;
+  }
+  
+  .subtitle {
+    font-size: 1rem !important;
+    padding: 0 1rem;
+  }
+
+  /* Header */
+  .header-nav {
+    padding: 1rem !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    gap: 0.5rem !important;
+  }
+  
+  .header-nav .logo img {
+    height: 20px !important;
+  }
+  
+  .nav-links {
+    display: none !important; /* Hide links on mobile to prevent overflow */
+  }
+  
+  .nav-cta {
+    font-size: 0.65rem !important;
+    padding: 0.6rem 0.8rem !important;
+    white-space: nowrap !important;
+  }
+
+  /* Industrial/Power Section */
+  .industrial-container {
+    flex-direction: column !important;
+    gap: 3rem !important;
+  }
+  
+  .industrial-stats {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  
+  .staggered-card {
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Split Sections & Grids */
+  .split-section,
+  .split-section.container,
+  .split-section .container {
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+  
+  .text-right {
+    text-align: left !important;
+  }
+  
+  .pricing-grid, 
+  .amenities-grid, 
+  .footer-container {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Endurance Compact Bar */
+  .compact-bar-section {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  
+  .bar-title {
+    font-size: 2.2rem !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+  
+  .bar-content-above {
+    padding-right: 0 !important;
+  }
+  
+  .vertical-stats-bar {
+    width: 100% !important;
+    margin-top: 2rem !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    border-left: none !important;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    border-radius: 20px !important;
+    min-width: 100% !important;
+  }
+  
+  .stat-item {
+    width: 100% !important;
+    clip-path: none !important;
+    margin: 0 !important;
+    padding: 1.5rem !important;
+    height: auto !important;
+    border-radius: 10px !important;
+  }
+
+  /* 3D Coaching Arc (Fallback to Stacked) */
+  .arc-3d-wrapper {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    align-items: center !important;
+    margin-top: 2rem !important;
+  }
+  
+  .arc-3d-wrapper .profile-card {
+    position: relative !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 0 0 2rem 0 !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    opacity: 1 !important;
+  }
+  
+  /* CTA / Trust Metrics */
+  .trust-metrics {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    align-items: center !important;
+  }
+  
+  .trust-number {
+    font-size: 3rem !important;
+  }
+  
+  /* Disable Sticky Scroll Heights on Mobile */
+  .sticky-scroll-section {
+    height: auto !important;
+  }
+  
+  .sticky-wrapper {
+    position: relative !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
