@@ -1591,6 +1591,16 @@ body {
     transform: none !important;
     width: 100% !important;
     max-width: 100% !important;
+    padding: 1.5rem !important;
+    margin-left: 0 !important;
+  }
+  
+  .staggered-card .data-number {
+    font-size: 2.2rem !important;
+  }
+  
+  .staggered-card .data-label {
+    font-size: 0.75rem !important;
   }
 
   /* Split Sections & Grids */
