@@ -26,6 +26,15 @@ function preloadImages() {
   let currentIndex = 1;
   let hasStarted = false;
   
+  // EMERGENCY FALLBACK: If the network hangs on deployment, unlock the site after 4 seconds
+  setTimeout(() => {
+    if (!hasStarted) {
+      console.warn("Preloader emergency unlock triggered due to network timeout.");
+      hasStarted = true;
+      onAllFramesLoaded();
+    }
+  }, 4000);
+  
   // Pre-fill array to maintain correct frame order
   for (let i = 0; i <= FRAME_COUNT; i++) {
     images.push(null);
@@ -60,16 +69,9 @@ function preloadImages() {
         }
       };
 
-      img.onload = () => {
-        // Force hardware decode for buttery smooth first draw
-        if (img.decode) {
-          img.decode().then(finishImg).catch(finishImg);
-        } else {
-          finishImg();
-        }
-      };
+      img.onload = finishImg;
       
-      // If error, still continue loading so loader doesn't freeze forever
+      // If error (e.g. 404 on deployment), still continue loading so loader doesn't freeze forever
       img.onerror = finishImg; 
 
       img.src = FRAME_PATH_TEMPLATE(i);
