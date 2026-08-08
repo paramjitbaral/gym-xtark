@@ -1548,6 +1548,11 @@ body {
     font-size: 1rem !important;
     padding: 0 1rem;
   }
+  
+  .xtark-logo,
+  .watermark-cover {
+    display: none !important;
+  }
 
   /* Header */
   .header-nav {
