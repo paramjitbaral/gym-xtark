@@ -3,8 +3,19 @@ const FRAME_COUNT = 600;
 const FRAME_PATH_TEMPLATE = (index) => `frames/frame_${String(index).padStart(4, '0')}.jpg`;
 
 function initApp() {
+  // SAFETY: unlock preloader after 2s no matter what (handles missing frames folder on deployment)
+  const preloaderEl = document.getElementById('preloader');
+  const emergencyUnlock = setTimeout(() => {
+    if (preloaderEl && !preloaderEl.classList.contains('loaded')) {
+      console.warn('XTARK: Emergency unlock triggered');
+      preloaderEl.classList.add('loaded');
+      document.body.style.overflow = 'auto';
+    }
+  }, 2000);
+
   // DOM Elements
   const canvas = document.getElementById('scroll-canvas');
+  if (!canvas) { console.error('Canvas not found'); return; }
   const ctx = canvas.getContext('2d');
   const preloader = document.getElementById('preloader');
   const percentText = document.getElementById('load-percentage');
@@ -80,8 +91,9 @@ function initApp() {
 
   // ─── Preloader ───────────────────────────────────────────────────────────────
   function onAllFramesLoaded() {
+    clearTimeout(emergencyUnlock);
     setTimeout(() => {
-      preloader.classList.add('loaded');
+      if (preloader) preloader.classList.add('loaded');
       document.body.style.overflow = 'auto';
       resizeCanvas();
       updateTargetFrame();
