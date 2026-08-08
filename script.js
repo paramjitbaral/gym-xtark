@@ -92,15 +92,17 @@ function initApp() {
   // ─── Preloader ───────────────────────────────────────────────────────────────
   function onAllFramesLoaded() {
     clearTimeout(emergencyUnlock);
-    setTimeout(() => {
+    // Draw the canvas FIRST so background is visible before preloader fades
+    resizeCanvas();
+    updateTargetFrame();
+    currentFrame = targetFrame;
+    drawFrame(Math.round(currentFrame));
+    startAnimationLoop();
+    // NOW fade the preloader - canvas is already painted, no black flash
+    requestAnimationFrame(() => {
       if (preloader) preloader.classList.add('loaded');
       document.body.style.overflow = 'auto';
-      resizeCanvas();
-      updateTargetFrame();
-      currentFrame = targetFrame;
-      drawFrame(Math.round(currentFrame));
-      startAnimationLoop();
-    }, 500);
+    });
   }
 
   function updateProgress(count, total) {
@@ -139,6 +141,12 @@ function initApp() {
         const finishImg = () => {
           loadedCount++;
           chunkLoadedCount++;
+
+          // Draw frame 1 immediately the instant it loads - no black background
+          if (i === 1 && img.complete && img.naturalWidth > 0) {
+            resizeCanvas();
+            drawFrame(1);
+          }
 
           if (!hasStarted) {
             updateProgress(Math.min(loadedCount, INITIAL_LOAD_COUNT), INITIAL_LOAD_COUNT);

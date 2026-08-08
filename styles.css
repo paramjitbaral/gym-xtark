@@ -40,7 +40,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 1s ease, visibility 1s;
+  transition: opacity 0.3s ease, visibility 0.3s;
 }
 
 .loader-content {
