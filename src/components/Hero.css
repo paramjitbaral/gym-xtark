@@ -1,0 +1,323 @@
+.hero-scroll-wrapper {
+  height: 500vh;
+  position: relative;
+}
+
+.hero-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center right 20%; /* Shift subject to the right */
+  z-index: 1;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.9) 100%);
+  z-index: 2;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 40px 1.2fr 1fr 40px; /* Increased middle space to push testimonial right */
+  align-items: center;
+  gap: 2rem;
+
+
+}
+
+
+/* Left Sidebar Counter */
+.counter-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  height: 350px;
+}
+
+.counter-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 2px;
+}
+
+.progress-bar-container {
+  width: 2px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.progress-indicator {
+  position: absolute;
+  width: 4px;
+  height: 40px;
+  background-color: #fff;
+  left: -1px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Main Content (Title) */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-group h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 9vw, 7rem); /* Increased for more impact */
+  line-height: 0.85;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+}
+
+.solid-text {
+  color: #fff;
+}
+
+.cta-group {
+  margin-top: 3rem;
+}
+
+.shop-now {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.shop-now:hover {
+  transform: translateX(10px);
+}
+
+.shop-now span {
+  font-size: 1.5rem;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  padding-left: 2rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  justify-self: end; /* Keep container on the right */
+  text-align: left; /* Align text content to the left */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align flex items to the left */
+}
+
+.quote-icon {
+  font-family: serif;
+  font-size: 5rem;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+  max-width: 250px; /* Reduced width for vertical look */
+}
+
+
+.author-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.author-role {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 1px;
+}
+
+/* Far Right Slogan */
+.vertical-slogan {
+  writing-mode: vertical-rl;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .hero-grid {
+    grid-template-columns: 60px 1.2fr 1fr 40px;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: auto auto;
+    padding-top: 100px;
+  }
+  
+  .testimonial-section {
+    grid-column: 2;
+    padding-left: 0;
+    border-left: none;
+    margin-top: 2rem;
+  }
+  
+  .vertical-slogan {
+    display: none;
+  }
+  
+  .title-group h1 {
+    font-size: 6rem;
+  }
+}
+
+.mobile-subtitle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero-scroll-wrapper {
+    height: 100vh;
+  }
+
+  .hero-sticky {
+    position: relative;
+    height: 100vh;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  .hero-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    height: 100%;
+  }
+
+  .counter-sidebar,
+  .testimonial-section,
+  .vertical-slogan {
+    display: none !important;
+  }
+
+  .main-content {
+    text-align: center;
+    width: 100%;
+  }
+
+  .title-group h1 {
+    font-size: clamp(3.5rem, 12vw, 5rem);
+    line-height: 0.9;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+  }
+
+  .mobile-subtitle {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 1.5rem 0 2.5rem 0;
+    max-width: 100%;
+  }
+
+  .cta-group {
+    margin-top: 0;
+    justify-content: center;
+    display: flex;
+  }
+
+  .shop-now {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border: 2px solid #fff;
+    background-color: #fff;
+    color: #000;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+  .hero-bg {
+    background-position: center;
+    filter: brightness(0.6);
+  }
+
+  .overlay {
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 100%);
+  }
+}
+
+@media (max-width: 480px) {
+  .title-group h1 {
+    font-size: 3.5rem;
+  }
+
+  .shop-now {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .cta-group {
+    margin-top: 1.5rem;
+  }
+  
+  .hero-grid {
+    padding: 100px 7% 30px 7%;
+  }
+
+  .testimonial-section {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .testimonial-text {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}

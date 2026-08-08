@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>XTARK | Cinematic Experience</title>
+  <meta name="description" content="Experience the power of XTARK.">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="Xtark Logo BGR.png">
+</head>
+
+<body>
+
+  <!-- 1. PRELOADER -->
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="loader-logo">XTARK</div>
+      <div class="loader-progress">
+        <div class="loader-progress-bar" id="load-progress-bar"></div>
+      </div>
+      <div class="loader-percentage" id="load-percentage">0%</div>
+    </div>
+  </div>
+
+  <!-- 2. MINIMAL HEADER -->
+  <header class="header-nav" id="header-nav">
+    <div class="logo" style="display: flex; align-items: center; gap: 12px;">
+      <img src="Xtark Logo BGR.png" alt="Xtark Logo" style="height: 32px; width: auto; opacity: 0.9;">
+      XTARK
+    </div>
+    <nav class="nav-links" id="nav-links">
+      <a href="#section-power">About</a>
+      <a href="#section-schedule">Schedule</a>
+      <a href="#section-amenities">Facility</a>
+      <a href="#section-pricing">Pricing</a>
+    </nav>
+    <a href="#section-cta" class="nav-cta">Experience XTARK</a>
+  </header>
+
+  <!-- 3. FIXED CANVAS BACKGROUND -->
+  <div class="fixed-canvas-container">
+    <canvas id="scroll-canvas"></canvas>
+    <div class="cinematic-vignette"></div>
+    <div class="watermark-cover"></div>
+    <img src="Xtark Logo BGR.png" alt="Xtark Logo" class="xtark-logo">
+  </div>
+
+  <!-- 4. SCROLLING FOREGROUND CONTENT -->
+  <main class="scrolling-content">
+
+    <!-- HERO -->
+    <section class="std-section hero-section" id="section-hero">
+      <div class="cinematic-text text-center">
+        <h1 class="mega-title">FORGE<br><span class="legacy-text">LEGACY</span></h1>
+        <p class="subtitle">Transform your body. Master your mind.</p>
+      </div>
+      <!-- SCROLL INDICATOR -->
+      <div class="scroll-down">
+        <div class="mouse-icon">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / POWER (INDUSTRIAL RAW) -->
+    <section class="std-section industrial-section" id="section-power">
+      <div class="ghost-text">IRON</div>
+      <div class="industrial-container">
+        <div class="industrial-content">
+          <h2 class="title">BRUTE<br>STRENGTH</h2>
+          <div class="accent-bar"></div>
+          <p class="description">Build dense muscle and shatter personal records with elite free weights and power
+            racks. We have carefully curated the finest equipment for serious athletes.</p>
+        </div>
+        <div class="industrial-stats">
+          <div class="staggered-card up">
+            <span class="data-number">50+</span>
+            <span class="data-label">SQUAT RACKS</span>
+          </div>
+          <div class="staggered-card down">
+            <span class="data-number">10K</span>
+            <span class="data-label">LBS FREE WEIGHTS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENDURANCE (COMPACT HORIZONTAL BAR) -->
+    <section class="std-section compact-bar-section" id="section-endurance">
+      
+      <!-- Content Above -->
+      <div class="bar-content-above">
+        <h2 class="bar-title">PURE HUSTLE</h2>
+        <p class="bar-desc">Push your cardiovascular limits to the absolute max in our state-of-the-art endurance zones.</p>
+        
+        <div class="endurance-bio">
+          Our facility is engineered for athletes who refuse to settle. Equipped with <strong>Woodway treadmills, assault bikes, and Concept2 rowers</strong>, this high-altitude simulation zone is designed to completely rebuild your metabolic engine, test your absolute VO2 max, and push your physical boundaries further than ever before.
+        </div>
+      </div>
+
+      <!-- Vertical Bar Right (Chevron Timeline) -->
+      <div class="vertical-stats-bar" id="endurance-stats">
+        <div class="stat-item level-1">
+          <span class="stat-num">5,000</span>
+          <span class="stat-text">SQ FT TURF ARENA</span>
+        </div>
+        <div class="stat-item level-2">
+          <span class="stat-num">VO2</span>
+          <span class="stat-text">MAX TESTING</span>
+        </div>
+        <div class="stat-item level-3">
+          <span class="stat-num">24/7</span>
+          <span class="stat-text">GYM ACCESS</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PROGRAMS -->
+    <section class="std-section split-section reverse" id="section-programs">
+      <div class="container">
+        <div class="text-content text-right">
+          <h2 class="title">ELITE<br>PROGRAMS</h2>
+          <p class="description">Structured training blocks designed by professional strength coaches. From powerlifting
+            prep to high-intensity interval training, we have a system for your goals.</p>
+        </div>
+        <div class="accordion-container" style="margin: 0; max-width: 600px;">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <h3>HYPERTROPHY</h3>
+              <span class="icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <p>Science-backed muscle building blocks focused on progressive overload and maximal cellular swelling.
+                Designed to add dense muscle mass to your frame.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>STRENGTH PREP</h3>
+              <span class="icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <p>Peaking programs for your next meet. Focused on the big three: Squat, Bench, and Deadlift. Low rep
+                ranges, high intensity, maximum output.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>METCON</h3>
+              <span class="icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <p>Engine-building metabolic conditioning. Push your cardiovascular limits with a mix of kettlebells,
+                plyometrics, and high-intensity interval sprints.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COACHING -->
+    <section class="std-section sticky-scroll-section" id="section-coaching">
+      <div class="sticky-wrapper">
+        <div class="container split-section" style="width: 100%;">
+          <div class="text-content">
+          <h2 class="title">EXPERT<br>COACHING</h2>
+          <p class="description">Stop guessing. Our coaching staff consists of former competitive athletes and certified
+            strength specialists who will rebuild your mechanics from the ground up.</p>
+        </div>
+        <div class="profiles-grid arc-3d-wrapper">
+          <div class="profile-card" style="background-image: url('coach_marcus.png');">
+            <div class="profile-overlay"></div>
+            <div class="profile-info">
+              <h4>MARCUS V.</h4>
+              <span class="role">HEAD COACH - POWERLIFTING</span>
+              <div class="profile-details">
+                <p>Former IPF competitor. Specializes in peaking programs and squat mechanics.</p>
+              </div>
+            </div>
+          </div>
+          <div class="profile-card" style="background-image: url('coach_sarah.png');">
+            <div class="profile-overlay"></div>
+            <div class="profile-info">
+              <h4>SARAH J.</h4>
+              <span class="role">METCON SPECIALIST</span>
+              <div class="profile-details">
+                <p>CrossFit Games athlete. Focuses on engine building and gymnastics.</p>
+              </div>
+            </div>
+          </div>
+          <div class="profile-card" style="background-image: url('coach_david.png');">
+            <div class="profile-overlay"></div>
+            <div class="profile-info">
+              <h4>DAVID K.</h4>
+              <span class="role">PHYSIOTHERAPIST</span>
+              <div class="profile-details">
+                <p>DPT. Expert in injury rehabilitation, mobility, and movement screening.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div> <!-- Close sticky-wrapper -->
+    </section>
+
+    <!-- THE ARSENAL (EQUIPMENT) -->
+    <section class="std-section split-section reverse" id="section-arsenal">
+      <div class="container">
+        <div class="text-content text-right">
+          <h2 class="title">THE<br>ARSENAL</h2>
+          <p class="description">We don't compromise on quality. Our facility is outfitted with exclusively
+            competition-spec equipment from Rogue, Eleiko, and Arsenal Strength. No gimmicks, just cold hard iron.</p>
+        </div>
+        <div class="data-grid">
+          <div class="data-card">
+            <span class="data-number">CALIBRATED</span>
+            <span class="data-label">STEEL PLATES</span>
+          </div>
+          <div class="data-card">
+            <span class="data-number">SPECIALTY</span>
+            <span class="data-label">BARBELLS FOR EVERY LIFT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUTRITION & RECOVERY -->
+    <section class="std-section full-section" id="section-recovery">
+      <div class="container column-layout">
+        <div class="text-content">
+          <h2 class="title">REBUILD &<br>RECOVER</h2>
+          <p class="description">What you do outside the gym matters just as much as what you do inside. Access elite
+            recovery tools to bounce back faster and train harder.</p>
+        </div>
+        <div class="recovery-compact-bar">
+          <div class="recovery-stat">
+            <div class="stat-header">
+              <span class="stat-num">01</span>
+              <h4>COLD PLUNGES</h4>
+            </div>
+            <p>Reduce inflammation instantly and shock your nervous system.</p>
+          </div>
+          
+          <div class="stat-divider"></div>
+          
+          <div class="recovery-stat">
+            <div class="stat-header">
+              <span class="stat-num">02</span>
+              <h4>INFRARED SAUNAS</h4>
+            </div>
+            <p>Accelerate muscle repair and flush toxins at the cellular level.</p>
+          </div>
+          
+          <div class="stat-divider"></div>
+          
+          <div class="recovery-stat">
+            <div class="stat-header">
+              <span class="stat-num">03</span>
+              <h4>MACRO BAR</h4>
+            </div>
+            <p>Post-workout shakes & precision nutrition meals ready to go.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY & CULTURE (MASONRY) -->
+    <section class="std-section full-section" id="section-community">
+      <div class="container column-layout">
+        <div class="white-canvas">
+          <div class="text-content">
+            <h2 class="title dark-title">IRON<br>BROTHERHOOD</h2>
+            <p class="description dark-desc">Surround yourself with people who demand more. This isn't a commercial gym. This is a
+              family of lifters pushing each other to greatness.</p>
+          </div>
+          
+          <div class="equinox-stats-row">
+            <div class="equinox-stat">
+              <span class="eq-number">800+</span>
+              <h3 class="eq-title">LBS DEADLIFT</h3>
+              <p class="eq-desc">Our top athletes set the standard. The wall of honor is waiting.</p>
+            </div>
+            <div class="equinox-divider"></div>
+            <div class="equinox-stat">
+              <span class="eq-number">ZERO</span>
+              <h3 class="eq-title">EGOS ALLOWED</h3>
+              <p class="eq-desc">Everyone starts somewhere. Put your head down and work.</p>
+            </div>
+            <div class="equinox-divider"></div>
+            <div class="equinox-stat">
+              <span class="eq-number">50+</span>
+              <h3 class="eq-title">STATE CHAMPS</h3>
+              <p class="eq-desc">We breed champions. Elevate your total to the next level.</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- PERSONAL TRAINING -->
+    <section class="std-section split-section reverse" id="section-pt">
+      <div class="container">
+        <div class="text-content text-right">
+          <h2 class="title">ELITE<br>TRAINING</h2>
+          <p class="description">Work 1-on-1 with coaches who have actually stepped on the platform. Whether your goal
+            is a 500lb squat or dropping to single-digit body fat, we write the blueprint.</p>
+        </div>
+        <div class="data-grid">
+          <div class="data-card">
+            <span class="data-number">CUSTOM</span>
+            <span class="data-label">MACRO PROTOCOLS</span>
+          </div>
+          <div class="data-card">
+            <span class="data-number">WEEKLY</span>
+            <span class="data-label">FORM CHECK-INS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- AMENITIES -->
+    <section class="std-section split-section" id="section-amenities">
+      <div class="container">
+        <div class="text-content" style="text-align: left; max-width: 450px;">
+          <h2 class="title" style="text-align: left; margin-left: 0;">PREMIUM<br>AMENITIES</h2>
+          <p class="description" style="text-align: left; margin-bottom: 3rem;">Everything you need to train hard and recover right. We provide a zero-compromise facility.</p>
+          
+          <div class="dynamic-amenity-display" style="border-left: 2px solid rgba(255,255,255,0.5); padding-left: 1.5rem; min-height: 5rem;">
+            <h4 id="amenity-title" style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 400; letter-spacing: 2px; color: #fff; margin: 0 0 0.5rem 0; text-transform: uppercase;">LOCKERS</h4>
+            <p id="amenity-desc" style="font-family: var(--font-body); font-size: 0.95rem; color: rgba(255, 255, 255, 0.6); margin: 0; line-height: 1.5;">Private showers, towel service & digital lockers</p>
+          </div>
+        </div>
+        <div class="amenities-arc-container">
+          <svg class="amenities-arc" viewBox="-20 -20 260 440" xmlns="http://www.w3.org/2000/svg">
+            <!-- W1: LOCKERS (Top) -->
+            <g class="meter-wedge" data-target="am-1">
+              <path d="M 200 120 L 200 0 A 200 200 0 0 0 58.58 58.58 L 143.43 143.43 A 80 80 0 0 1 200 120 Z" class="wedge-path" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+              <text x="142.6" y="61.4" fill="rgba(255, 255, 255, 0.8)" font-size="13" font-weight="400" letter-spacing="3" text-anchor="middle" dominant-baseline="middle" transform="rotate(-22.5 142.6 61.4)">LOCKERS</text>
+            </g>
+            <!-- W2: MEALS -->
+            <g class="meter-wedge" data-target="am-2">
+              <path d="M 143.43 143.43 L 58.58 58.58 A 200 200 0 0 0 0 200 L 120 200 A 80 80 0 0 1 143.43 143.43 Z" class="wedge-path" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+              <text x="61.4" y="142.6" fill="rgba(255, 255, 255, 0.8)" font-size="13" font-weight="400" letter-spacing="3" text-anchor="middle" dominant-baseline="middle" transform="rotate(-67.5 61.4 142.6)">MEALS</text>
+            </g>
+            <!-- W3: THERAPY -->
+            <g class="meter-wedge" data-target="am-3">
+              <path d="M 120 200 L 0 200 A 200 200 0 0 0 58.58 341.42 L 143.43 256.57 A 80 80 0 0 1 120 200 Z" class="wedge-path" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+              <text x="61.4" y="257.4" fill="rgba(255, 255, 255, 0.8)" font-size="13" font-weight="400" letter-spacing="3" text-anchor="middle" dominant-baseline="middle" transform="rotate(67.5 61.4 257.4)">THERAPY</text>
+            </g>
+            <!-- W4: PRO SHOP (Bottom) -->
+            <g class="meter-wedge" data-target="am-4">
+              <path d="M 143.43 256.57 L 58.58 341.42 A 200 200 0 0 0 200 400 L 200 280 A 80 80 0 0 1 143.43 256.57 Z" class="wedge-path" fill="rgba(255, 255, 255, 0.11)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+              <text x="142.6" y="338.6" fill="rgba(255, 255, 255, 0.8)" font-size="13" font-weight="400" letter-spacing="3" text-anchor="middle" dominant-baseline="middle" transform="rotate(22.5 142.6 338.6)">PRO SHOP</text>
+            </g>
+          </svg>
+
+          <!-- Hidden Data for JS -->
+          <div id="arc-data" style="display: none;">
+            <div id="am-1" data-title="LOCKER ROOMS" data-desc="Private showers, towel service & digital lockers"></div>
+            <div id="am-2" data-title="MEAL PREP" data-desc="On-site cafe with macro-counted meals"></div>
+            <div id="am-3" data-title="THERAPY" data-desc="In-house DPTs for injury prevention & rehab"></div>
+            <div id="am-4" data-title="PRO SHOP" data-desc="Apparel, grips, belts & lifting accessories"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="std-section split-section" id="section-faq">
+      <div class="container">
+        <div class="text-content">
+          <h2 class="title">F.A.Q.</h2>
+          <p class="description">Everything you need to know before stepping through our doors.</p>
+        </div>
+        <div class="accordion-container" style="flex: 0 0 500px; margin: 0;">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <h3>DO YOU ALLOW DROP-INS?</h3>
+              <span class="icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <p>Yes, day passes are ₹2,000. Must be purchased during staffed hours.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>IS THERE A CONTRACT?</h3>
+              <span class="icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <p>No. All memberships are month-to-month. Cancel anytime.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>CARDIO EQUIPMENT?</h3>
+              <span class="icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <p>Yes, we have a dedicated turf arena, rowers, assault bikes, and treadmills.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="std-section split-section reverse" id="section-location">
+      <div class="container">
+        <div class="text-content text-right">
+          <h2 class="title">THE<br>COMPOUND</h2>
+          <p class="description">Located in the heart of the industrial district. We are open 24/7/365 for members.
+            Staffed hours are limited. Come prepared to work.</p>
+        </div>
+        <div class="data-grid">
+          <div class="data-card">
+            <span class="data-number">9AM-8PM</span>
+            <span class="data-label">STAFFED HOURS M-F</span>
+          </div>
+          <div class="data-card">
+            <span class="data-number">IRON ST.</span>
+            <span class="data-label">INDUSTRIAL WAREHOUSE DISTRICT</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="std-section full-section" id="section-pricing">
+      <div class="container column-layout">
+        <div class="text-content text-center" style="text-align: center; width: 100%; display: flex; flex-direction: column; align-items: center;">
+          <h2 class="title" style="text-align: center;">MEMBERSHIP<br>PLANS</h2>
+          <p class="description" style="text-align: center; margin-left: auto; margin-right: auto;">No hidden fees. No enrollment charges. Just pure access to the best training facility
+            in the state.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>OPEN GYM</h3>
+            <div class="price">₹4,999<span>/mo</span></div>
+            <ul class="features">
+              <li>24/7 Facility Access</li>
+              <li>Pro-Grade Free Weights</li>
+              <li>Calibrated Plates & Bars</li>
+              <li>Powerlifting Turf Access</li>
+              <li>Locker & Shower Access</li>
+            </ul>
+            <a href="#" class="btn-secondary">JOIN NOW</a>
+          </div>
+          <div class="pricing-card popular">
+            <div class="badge">MOST POPULAR</div>
+            <h3>XTARK PRO</h3>
+            <div class="price">₹9,999<span>/mo</span></div>
+            <ul class="features">
+              <li>All Open Gym Features</li>
+              <li>Unlimited Group Classes</li>
+              <li>Recovery Room & Sauna</li>
+              <li>1x Personal Training/mo</li>
+              <li>Monthly In-Body Scans</li>
+            </ul>
+            <a href="#" class="btn-primary">JOIN NOW</a>
+          </div>
+          <div class="pricing-card">
+            <h3>COACHING</h3>
+            <div class="price">₹19,999<span>/mo</span></div>
+            <ul class="features">
+              <li>All Pro Features</li>
+              <li>1-on-1 Custom Programming</li>
+              <li>Weekly Nutrition Check-ins</li>
+              <li>Video Form Analysis</li>
+              <li>Direct Coach Messaging</li>
+            </ul>
+            <a href="#" class="btn-secondary">JOIN NOW</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="std-section cta-section" id="section-cta">
+      <div class="cinematic-text text-center">
+        <h2 class="mega-title">START<br>TODAY</h2>
+        <div class="trust-metrics justify-center">
+          <div class="trust-item">
+            <span class="trust-number">10,000+</span>
+            <span class="trust-label">ELITE ATHLETES</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-number">4.9/5</span>
+            <span class="trust-label">MEMBER RATING</span>
+          </div>
+        </div>
+        <p class="subtitle">Commit to the grind.</p>
+        <a href="#" class="btn-primary" onclick="alert('Welcome to XTARK.')">CLAIM YOUR FREE PASS</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Setup interactive arc
+      const wedges = document.querySelectorAll('.meter-wedge');
+      const titleEl = document.getElementById('amenity-title');
+      const descEl = document.getElementById('amenity-desc');
+
+      wedges.forEach(wedge => {
+        wedge.addEventListener('mouseenter', () => {
+          wedges.forEach(w => w.classList.remove('active'));
+          wedge.classList.add('active');
+
+          const targetId = wedge.getAttribute('data-target');
+          const dataEl = document.getElementById(targetId);
+          if (dataEl && titleEl && descEl) {
+            titleEl.textContent = dataEl.getAttribute('data-title');
+            descEl.textContent = dataEl.getAttribute('data-desc');
+          }
+        });
+      });
+
+      if (wedges.length > 0) {
+        wedges[0].classList.add('active');
+      }
+
+      // Setup Animated Analog Clock
+      const schedule = [
+        { time24: 6.0, name: "HYPERTROPHY", days: "Mon, Wed, Fri", coach: "COACH DAVIS" },
+        { time24: 7.0, name: "POWERLIFTING", days: "Tue, Thu", coach: "COACH REYNOLDS" },
+        { time24: 12.0, name: "METCON", days: "Mon - Fri", coach: "COACH SARAH" },
+        { time24: 17.5, name: "HYPERTROPHY", days: "Mon, Wed, Fri", coach: "COACH DAVIS" },
+        { time24: 18.5, name: "POWERLIFTING", days: "Tue, Thu", coach: "COACH REYNOLDS" }
+      ];
+
+      const handGroup = document.getElementById('clock-hand-group');
+      const amPmEl = document.getElementById('clock-ampm');
+      const nameEl = document.getElementById('clock-class-name');
+      const daysEl = document.getElementById('clock-class-days');
+      const coachEl = document.getElementById('clock-class-coach');
+
+      let startTime = null;
+      const cycleDuration = 24000; // 24 seconds for a full 24-hour cycle
+
+      function animateClock(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = (timestamp - startTime) % cycleDuration;
+        const currentHour24 = (progress / cycleDuration) * 24; 
+        
+        // 12-hour dial mapping
+        const currentHour12 = currentHour24 % 12;
+        const angle = currentHour12 * 30; // 360 degrees / 12 hours
+        
+        if (handGroup) {
+          handGroup.setAttribute('transform', `rotate(${angle}, 200, 200)`);
+        }
+
+        let activeClass = null;
+        if (currentHour24 >= 5.5 && currentHour24 < 6.5) activeClass = schedule[0]; // 6:00 AM
+        else if (currentHour24 >= 6.5 && currentHour24 < 8.0) activeClass = schedule[1]; // 7:00 AM
+        else if (currentHour24 >= 11.0 && currentHour24 < 13.0) activeClass = schedule[2]; // 12:00 PM
+        else if (currentHour24 >= 17.0 && currentHour24 < 18.0) activeClass = schedule[3]; // 5:30 PM
+        else if (currentHour24 >= 18.0 && currentHour24 < 19.5) activeClass = schedule[4]; // 6:30 PM
+
+        const isPM = currentHour24 >= 12;
+        if (amPmEl) amPmEl.textContent = isPM ? "PM" : "AM";
+
+        if (nameEl && daysEl && coachEl) {
+          if (activeClass) {
+            nameEl.textContent = activeClass.name;
+            daysEl.textContent = activeClass.days;
+            coachEl.textContent = activeClass.coach;
+            nameEl.setAttribute('fill', '#fff');
+            daysEl.setAttribute('fill', 'rgba(255,255,255,0.7)');
+            coachEl.setAttribute('fill', '#ff4d4d');
+          } else {
+            nameEl.textContent = "OPEN GYM";
+            daysEl.textContent = "AVAILABLE FOR ALL MEMBERS";
+            coachEl.textContent = "NO CLASS IN SESSION";
+            nameEl.setAttribute('fill', '#fff');
+            daysEl.setAttribute('fill', 'rgba(255,255,255,0.4)');
+            coachEl.setAttribute('fill', '#ff4d4d');
+          }
+        }
+
+        requestAnimationFrame(animateClock);
+      }
+
+      if (handGroup) {
+        requestAnimationFrame(animateClock);
+      }
+    });
+  </script>
+</body>
+
+</html>

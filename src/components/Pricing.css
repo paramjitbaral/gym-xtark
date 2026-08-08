@@ -1,0 +1,211 @@
+.pricing-section {
+  background-color: var(--bg);
+  padding: 10rem 10% 10rem 10%;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.section-tag {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: #fff;
+  line-height: 1;
+}
+
+.section-title span {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background-color: var(--surface);
+  padding: 3.5rem 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card:hover {
+  transform: translateY(-15px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-card.popular {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.pricing-card.popular .plan-name,
+.pricing-card.popular .plan-duration,
+.pricing-card.popular .plan-price,
+.pricing-card.popular .plan-desc,
+.pricing-card.popular .benefit-item span {
+  color: #000;
+}
+
+.pricing-card.popular .check-icon {
+  color: #000;
+}
+
+.popular-tag {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  border-radius: 4px;
+}
+
+.card-header {
+  margin-bottom: 2.5rem;
+}
+
+.plan-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.plan-duration {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
+  line-height: 1;
+}
+
+.plan-price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4.5rem;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.currency {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+}
+
+.plan-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 3rem;
+  line-height: 1.5;
+}
+
+.plan-benefits {
+  margin-bottom: 3.5rem;
+  flex-grow: 1;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.check-icon {
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.plan-btn {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pricing-card.popular .plan-btn {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+.pricing-card:not(.popular) .plan-btn:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+.pricing-card.popular .plan-btn:hover {
+  background-color: transparent;
+  color: #000;
+  border-color: #000;
+}
+
+@media (max-width: 1024px) {
+  .pricing-section {
+    padding: 6rem 8%;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 5rem 7%;
+  }
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .pricing-header {
+    margin-bottom: 4rem;
+  }
+
+  .pricing-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .plan-price {
+    font-size: 3.5rem;
+  }
+}

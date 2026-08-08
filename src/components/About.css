@@ -1,0 +1,209 @@
+.about-section {
+  background-color: var(--bg);
+  padding: 10rem 10%;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 8rem;
+}
+
+/* Left Side Visuals */
+.about-visuals {
+  position: relative;
+}
+
+.main-subject-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.main-subject-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.best-club-tag {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2.5rem;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.tag-border {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+}
+
+.best-club-tag span {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.secondary-image-card {
+  position: absolute;
+  top: -50px;
+  left: -80px;
+  width: 300px;
+  aspect-ratio: 16/9;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  z-index: -1;
+}
+
+.secondary-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right Side Content */
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 2.5rem;
+}
+
+.about-title span {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 3.5rem;
+  max-width: 500px;
+}
+
+.read-more-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 3.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 100px;
+  z-index: 1;
+}
+
+.read-more-btn span {
+  position: relative;
+  z-index: 2;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  color: #000;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Background Decorations */
+.about-section::before {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 6rem 8%;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+    text-align: center;
+  }
+  
+  .about-content {
+    align-items: center;
+  }
+  
+  .secondary-image-card {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -60px;
+    width: 250px;
+  }
+  
+  .best-club-tag {
+    right: 50%;
+    transform: translate(50%, -50%);
+    top: auto;
+    bottom: -30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 3rem;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .secondary-image-card {
+    display: none; /* Hide to simplify mobile view */
+  }
+
+  .main-subject-container {
+    aspect-ratio: 1/1; /* Square for mobile */
+  }
+}
